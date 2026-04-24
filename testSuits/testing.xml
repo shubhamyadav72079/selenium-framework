@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Test Suite" parallel="tests" thread-count="6">
+    <listeners>
+        <listener class-name="TestPackage.listeners"/>
+    </listeners>
+    <parameter name="URL" value="qaclickacademy.com"/>
+    
+    <test name="Sample Test">
+        <classes>
+            <class name="TestPackage.Demo"/>
+
+        </classes>
+    </test>
+
+    <test name="Sample Test2">
+        <parameter name="URL" value="Shub.com"></parameter>
+        <classes>
+        <class name="TestPackage.Demo2"/>
+        </classes>
+    </test>
+    <test name="Sample Test3">
+        <parameter name="api" value="12345"></parameter>
+
+        <classes>
+            <class name="TestPackage.Demo3"/>
+        </classes>
+    </test>
+</suite>

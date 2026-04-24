@@ -1,0 +1,20 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Ecommerce Suite">
+    <listeners>
+        <listener class-name="ecomproject.testcomponents.Listerners"></listener>
+    </listeners>
+
+    <test thread-count="5" name= "Submit Order Test">
+        <classes>
+            <class name="ecomproject.pageobject.StandAlonereference"/>
+        </classes>
+    </test>
+
+    <test thread-count="5" name= "Error validation test">
+        <classes>
+            <class name="ecomproject.pageobject.ErrorValidation"/>
+        </classes>
+    </test>
+
+</suite>
